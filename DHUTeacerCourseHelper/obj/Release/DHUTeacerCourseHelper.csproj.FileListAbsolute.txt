@@ -1,0 +1,12 @@
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.csproj.ResolveComReference.cache
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\bin\Release\DHUTeacerCourseHelper.exe
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\bin\Release\DHUTeacerCourseHelper.pdb
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.Form1.resources
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.Properties.Resources.resources
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.csproj.GenerateResource.Cache
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.exe
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.pdb
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\bin\Release\DHUTeacerCourseHelper.exe.manifest
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\bin\Release\DHUTeacerCourseHelper.application
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.exe.manifest
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.application

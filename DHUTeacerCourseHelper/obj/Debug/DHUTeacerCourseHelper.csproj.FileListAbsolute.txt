@@ -1,0 +1,9 @@
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\bin\Debug\DHUTeacerCourseHelper.exe
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\bin\Debug\DHUTeacerCourseHelper.pdb
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Debug\DHUTeacerCourseHelper.csprojResolveAssemblyReference.cache
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Debug\DHUTeacerCourseHelper.Form1.resources
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Debug\DHUTeacerCourseHelper.Properties.Resources.resources
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Debug\DHUTeacerCourseHelper.csproj.GenerateResource.Cache
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Debug\DHUTeacerCourseHelper.exe
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Debug\DHUTeacerCourseHelper.pdb
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Debug\DHUTeacerCourseHelper.csproj.ResolveComReference.cache
