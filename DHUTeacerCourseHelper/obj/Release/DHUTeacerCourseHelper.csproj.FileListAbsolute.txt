@@ -10,3 +10,4 @@ I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\bin\Release\DHUTeacerC
 I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\bin\Release\DHUTeacerCourseHelper.application
 I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.exe.manifest
 I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.application
+I:\vsprojects\DHUTeacerCourseHelper\DHUTeacerCourseHelper\obj\Release\DHUTeacerCourseHelper.csprojResolveAssemblyReference.cache

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.statusLabel = new System.Windows.Forms.Label();
             this.resetButton = new System.Windows.Forms.Button();
             this.submitButton = new System.Windows.Forms.Button();
@@ -41,47 +42,46 @@
             this.courseFileButton = new System.Windows.Forms.Button();
             this.courseFileTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox6.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -113,6 +113,17 @@
             this.tabPage1.Size = new System.Drawing.Size(419, 365);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "开始";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(287, 348);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(125, 12);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "http://www.ptbird.cn";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // statusLabel
             // 
@@ -224,6 +235,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "* 注意事项";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(7, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 12);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "* 仔细阅读注意事项";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.DarkRed;
+            this.label2.Location = new System.Drawing.Point(7, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(215, 12);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "* 处理前将要处理的excel文件全部关闭";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -248,39 +279,58 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "注意";
             // 
-            // tabPage3
+            // linkLabel2
             // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.linkLabel3);
-            this.tabPage3.Controls.Add(this.groupBox7);
-            this.tabPage3.Controls.Add(this.groupBox6);
-            this.tabPage3.Controls.Add(this.pictureBox1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(419, 365);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "关于";
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(287, 348);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(125, 12);
+            this.linkLabel2.TabIndex = 2;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "http://www.ptbird.cn";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // label2
+            // groupBox5
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(7, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 12);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "* 处理前将要处理的excel文件全部关闭";
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Location = new System.Drawing.Point(4, 154);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(408, 104);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "版权说明";
             // 
-            // label3
+            // label12
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(7, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 12);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "* 仔细阅读注意事项";
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.DarkRed;
+            this.label12.Location = new System.Drawing.Point(3, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(125, 12);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "* 请遵守相关开源协议";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.DarkRed;
+            this.label11.Location = new System.Drawing.Point(3, 51);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(113, 12);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "* 版权属于Postbird";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.DarkRed;
+            this.label10.Location = new System.Drawing.Point(3, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(125, 12);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "* 使用GPL2.0开源发布";
             // 
             // groupBox4
             // 
@@ -298,45 +348,15 @@
             this.groupBox4.Text = "使用注意";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
-            // label4
+            // label9
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(7, 21);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 12);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "* [重要] 将所有的中文括号替换成英文";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(7, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(209, 12);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "* [重要] 处理前关闭所有的excel文件";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.DarkRed;
-            this.label6.Location = new System.Drawing.Point(7, 64);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(371, 12);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "* 个别与课程代码中课程名字不一样的课程无法进行处理,需手动处理";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.DarkRed;
-            this.label7.Location = new System.Drawing.Point(7, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(293, 12);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "* 参照课程名称  夏:男篮(高) [前面姓氏和冒号必须]";
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.DarkRed;
+            this.label9.Location = new System.Drawing.Point(18, 127);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(125, 12);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "--目前不支持手动配置";
             // 
             // label8
             // 
@@ -348,97 +368,70 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "* 如果改变排课方式 请联系开发者改变代码内容";
             // 
-            // label9
+            // label7
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.DarkRed;
-            this.label9.Location = new System.Drawing.Point(18, 127);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 12);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "--目前不支持手动配置";
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.DarkRed;
+            this.label7.Location = new System.Drawing.Point(7, 87);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(293, 12);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "* 参照课程名称  夏:男篮(高) [前面姓氏和冒号必须]";
             // 
-            // groupBox5
+            // label6
             // 
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Location = new System.Drawing.Point(4, 154);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(408, 104);
-            this.groupBox5.TabIndex = 1;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "版权说明";
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.DarkRed;
+            this.label6.Location = new System.Drawing.Point(7, 64);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(371, 12);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "* 个别与课程代码中课程名字不一样的课程无法进行处理,需手动处理";
             // 
-            // label10
+            // label5
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.DarkRed;
-            this.label10.Location = new System.Drawing.Point(3, 27);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 12);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "* 使用GPL2.0开源发布";
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.DarkRed;
+            this.label5.Location = new System.Drawing.Point(7, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(209, 12);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "* [重要] 处理前关闭所有的excel文件";
             // 
-            // label11
+            // label4
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(3, 51);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(113, 12);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "* 版权属于Postbird";
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.DarkRed;
+            this.label4.Location = new System.Drawing.Point(7, 21);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(215, 12);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "* [重要] 将所有的中文括号替换成英文";
             // 
-            // label12
+            // tabPage3
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.DarkRed;
-            this.label12.Location = new System.Drawing.Point(3, 74);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(125, 12);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "* 请遵守相关开源协议";
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.linkLabel3);
+            this.tabPage3.Controls.Add(this.groupBox7);
+            this.tabPage3.Controls.Add(this.groupBox6);
+            this.tabPage3.Controls.Add(this.pictureBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(419, 365);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "关于";
             // 
-            // pictureBox1
+            // linkLabel3
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(128, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 101);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Controls.Add(this.label13);
-            this.groupBox6.Location = new System.Drawing.Point(7, 147);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(405, 55);
-            this.groupBox6.TabIndex = 1;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "版本";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(36, 33);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(143, 12);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "DHU教室排课助手[体育部]";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.DarkRed;
-            this.label14.Location = new System.Drawing.Point(234, 33);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 12);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "V 1.0.0";
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(287, 348);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(125, 12);
+            this.linkLabel3.TabIndex = 2;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "http://www.ptbird.cn";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // groupBox7
             // 
@@ -454,75 +447,6 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "作者";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(157, 17);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 12);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Postbird";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(72, 41);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(251, 12);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "There I am , in the world more exiciting!";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(48, 74);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(131, 12);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "邮箱: ptbird@yeah.net";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(204, 74);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 12);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "联系:";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(287, 348);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(125, 12);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://www.ptbird.cn";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(287, 348);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(125, 12);
-            this.linkLabel2.TabIndex = 2;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "http://www.ptbird.cn";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(287, 348);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(125, 12);
-            this.linkLabel3.TabIndex = 2;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "http://www.ptbird.cn";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // linkLabel4
             // 
             this.linkLabel4.AutoSize = true;
@@ -534,6 +458,82 @@
             this.linkLabel4.Text = " http://contact.ptbird.cn";
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(72, 41);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(251, 12);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "There I am , in the world more exiciting!";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(204, 74);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(35, 12);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "联系:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(48, 74);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(131, 12);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "邮箱: ptbird@yeah.net";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(157, 17);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 12);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Postbird";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Location = new System.Drawing.Point(7, 147);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(405, 55);
+            this.groupBox6.TabIndex = 1;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "版本";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.DarkRed;
+            this.label14.Location = new System.Drawing.Point(234, 33);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 12);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "V 1.0.0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(36, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(143, 12);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "DHU教室排课助手[体育部]";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(128, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -542,7 +542,6 @@
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DHU教师排课助手[体育部]-by postbird";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -555,17 +554,17 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

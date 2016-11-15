@@ -84,7 +84,12 @@ namespace DHUTeacerCourseHelper
         //重置
         private void resetButton_Click(object sender, EventArgs e)
         {
-           
+            courseFilePath = "";
+            courseCodeFilePath = "";
+            courseExtention="";
+            courseCodeTable="";
+            courseCodeExtention="";
+            courseCodeDs = new DataSet();
             courseCodeFileTextBox.Text = "";
             courseFileTextBox.Text = "";
             statusLabel.Text = "准备就绪.Powered by Postbird.";
@@ -92,15 +97,21 @@ namespace DHUTeacerCourseHelper
         //处理
         private void submitButton_Click(object sender, EventArgs e)
         {
-            /*****************************************************************/
-                        
-                            //获取课程代码部分 使用oledb方式进行操作
+            //设置按钮的不可用性
+            courseFileButton.Enabled = false;
+            courseCodeFileButton.Enabled = false;
+            resetButton.Enabled = false;
+            submitButton.Enabled = false;
 
-            /*****************************************************************/
+             /*****************************************************************/
+
+             //获取课程代码部分 使用oledb方式进行操作
+
+             /*****************************************************************/
 
 
-            //获取文本内容
-            courseCodeFilePath = courseCodeFileTextBox.Text.ToString().Trim();
+             //获取文本内容
+             courseCodeFilePath = courseCodeFileTextBox.Text.ToString().Trim();
             //创建连接 以便发生异常时关闭连接(建在try外)
             OleDbConnection courseCodeOleConn = new OleDbConnection();
             try
@@ -314,7 +325,11 @@ namespace DHUTeacerCourseHelper
             }
             finally
             {
-               
+                //恢复按钮的可用性
+                courseFileButton.Enabled = true;
+                courseCodeFileButton.Enabled = true;
+                resetButton.Enabled = true;
+                submitButton.Enabled = true;
             }
         }
 
