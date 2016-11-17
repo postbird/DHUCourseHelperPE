@@ -95,6 +95,14 @@ namespace DHUTeacerCourseHelper
             hunClass.Add("拓展");
             hunClass.Add("交谊舞");
             hunClass.Add("交谊舞2");
+            hunClass.Add("高尔夫");
+            hunClass.Add("定向");
+            hunClass.Add("游泳");
+            hunClass.Add("游泳(高)");
+            hunClass.Add("救生");
+            hunClass.Add("冰壶"); 
+            hunClass.Add("滑冰");
+            hunClass.Add("跆拳道");
             string tmpRichText = "";
             int flag = 0;
             for (int i = 0; i < hunClass.Count; i++)
