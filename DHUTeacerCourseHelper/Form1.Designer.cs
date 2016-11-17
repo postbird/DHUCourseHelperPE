@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.hunClassRichText = new System.Windows.Forms.RichTextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.statusLabel = new System.Windows.Forms.Label();
             this.resetButton = new System.Windows.Forms.Button();
@@ -70,11 +72,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.statusCountLabel = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.hunClassRichText = new System.Windows.Forms.RichTextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.manClassRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.statusCountTextBox = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -85,7 +89,8 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -97,14 +102,15 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(427, 414);
+            this.tabControl1.Size = new System.Drawing.Size(427, 489);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.groupBox10);
+            this.tabPage1.Controls.Add(this.groupBox9);
             this.tabPage1.Controls.Add(this.groupBox8);
-            this.tabPage1.Controls.Add(this.statusCountLabel);
             this.tabPage1.Controls.Add(this.linkLabel1);
             this.tabPage1.Controls.Add(this.statusLabel);
             this.tabPage1.Controls.Add(this.resetButton);
@@ -116,14 +122,32 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(419, 388);
+            this.tabPage1.Size = new System.Drawing.Size(419, 463);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "开始";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.hunClassRichText);
+            this.groupBox8.Location = new System.Drawing.Point(4, 204);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(204, 97);
+            this.groupBox8.TabIndex = 10;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "混合班的名称";
+            // 
+            // hunClassRichText
+            // 
+            this.hunClassRichText.Location = new System.Drawing.Point(3, 17);
+            this.hunClassRichText.Name = "hunClassRichText";
+            this.hunClassRichText.Size = new System.Drawing.Size(195, 74);
+            this.hunClassRichText.TabIndex = 0;
+            this.hunClassRichText.Text = "";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(287, 372);
+            this.linkLabel1.Location = new System.Drawing.Point(287, 444);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(125, 12);
             this.linkLabel1.TabIndex = 8;
@@ -135,7 +159,7 @@
             // 
             this.statusLabel.AutoSize = true;
             this.statusLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.statusLabel.Location = new System.Drawing.Point(2, 372);
+            this.statusLabel.Location = new System.Drawing.Point(5, 444);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(41, 12);
             this.statusLabel.TabIndex = 7;
@@ -144,7 +168,7 @@
             // 
             // resetButton
             // 
-            this.resetButton.Location = new System.Drawing.Point(265, 306);
+            this.resetButton.Location = new System.Drawing.Point(262, 409);
             this.resetButton.Margin = new System.Windows.Forms.Padding(2);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(73, 24);
@@ -155,7 +179,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(342, 306);
+            this.submitButton.Location = new System.Drawing.Point(342, 409);
             this.submitButton.Margin = new System.Windows.Forms.Padding(2);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(73, 24);
@@ -282,14 +306,14 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(419, 388);
+            this.tabPage2.Size = new System.Drawing.Size(419, 463);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "注意";
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(287, 372);
+            this.linkLabel2.Location = new System.Drawing.Point(289, 444);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(125, 12);
             this.linkLabel2.TabIndex = 2;
@@ -425,14 +449,14 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(419, 388);
+            this.tabPage3.Size = new System.Drawing.Size(419, 463);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "关于";
             // 
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(287, 372);
+            this.linkLabel3.Location = new System.Drawing.Point(287, 444);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(125, 12);
             this.linkLabel3.TabIndex = 2;
@@ -541,38 +565,48 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // statusCountLabel
+            // groupBox9
             // 
-            this.statusCountLabel.AutoSize = true;
-            this.statusCountLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.statusCountLabel.Location = new System.Drawing.Point(5, 350);
-            this.statusCountLabel.Name = "statusCountLabel";
-            this.statusCountLabel.Size = new System.Drawing.Size(0, 12);
-            this.statusCountLabel.TabIndex = 9;
+            this.groupBox9.Controls.Add(this.manClassRichTextBox);
+            this.groupBox9.Location = new System.Drawing.Point(225, 204);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(187, 97);
+            this.groupBox9.TabIndex = 10;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "没有\"男\"字的男生班";
             // 
-            // groupBox8
+            // manClassRichTextBox
             // 
-            this.groupBox8.Controls.Add(this.hunClassRichText);
-            this.groupBox8.Location = new System.Drawing.Point(4, 204);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(408, 97);
-            this.groupBox8.TabIndex = 10;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "混合课程的名称";
+            this.manClassRichTextBox.Location = new System.Drawing.Point(3, 17);
+            this.manClassRichTextBox.Name = "manClassRichTextBox";
+            this.manClassRichTextBox.Size = new System.Drawing.Size(178, 74);
+            this.manClassRichTextBox.TabIndex = 0;
+            this.manClassRichTextBox.Text = "";
             // 
-            // hunClassRichText
+            // groupBox10
             // 
-            this.hunClassRichText.Location = new System.Drawing.Point(3, 17);
-            this.hunClassRichText.Name = "hunClassRichText";
-            this.hunClassRichText.Size = new System.Drawing.Size(399, 74);
-            this.hunClassRichText.TabIndex = 0;
-            this.hunClassRichText.Text = "";
+            this.groupBox10.Controls.Add(this.statusCountTextBox);
+            this.groupBox10.Location = new System.Drawing.Point(7, 315);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(405, 89);
+            this.groupBox10.TabIndex = 11;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "处理结果";
+            // 
+            // statusCountTextBox
+            // 
+            this.statusCountTextBox.Location = new System.Drawing.Point(6, 15);
+            this.statusCountTextBox.Name = "statusCountTextBox";
+            this.statusCountTextBox.ReadOnly = true;
+            this.statusCountTextBox.Size = new System.Drawing.Size(393, 68);
+            this.statusCountTextBox.TabIndex = 0;
+            this.statusCountTextBox.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 417);
+            this.ClientSize = new System.Drawing.Size(430, 489);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -580,6 +614,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -599,7 +634,8 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox8.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -647,9 +683,12 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel4;
-        private System.Windows.Forms.Label statusCountLabel;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.RichTextBox hunClassRichText;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.RichTextBox manClassRichTextBox;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.RichTextBox statusCountTextBox;
     }
 }
 

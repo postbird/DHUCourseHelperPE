@@ -22,6 +22,7 @@ namespace DHUTeacerCourseHelper
         private string courseCodeExtention;
         private DataSet courseCodeDs=new DataSet();
         private ArrayList hunClass = new ArrayList();
+        private ArrayList extManClass = new ArrayList();//主要记录没有 男  这个标记的一些课程
 
         public Form1()
         {
@@ -82,11 +83,30 @@ namespace DHUTeacerCourseHelper
                     courseCodeFileTextBox.Text = fileDialog.FileName;
                     this.courseCodeFilePath = fileDialog.FileName;
                 }
+
             }
         }
         //初始化 initRichText
         private void initRichText()
         {
+            string tmpRichText = "";
+            int flag = 0;
+            //男生班
+            extManClass = new ArrayList();
+            extManClass.Add("散打");
+            for (int i = 0; i < extManClass.Count; i++)
+            {
+                if (flag > 0)
+                {
+                    tmpRichText += System.Environment.NewLine;
+                }
+                tmpRichText += extManClass[i];
+                flag++;
+            }
+            //输出
+            manClassRichTextBox.Text = tmpRichText;
+
+            //混合班
             hunClass = new ArrayList();
             hunClass.Add("保健班");
             hunClass.Add("旱冰");
@@ -103,8 +123,6 @@ namespace DHUTeacerCourseHelper
             hunClass.Add("冰壶"); 
             hunClass.Add("滑冰");
             hunClass.Add("跆拳道");
-            string tmpRichText = "";
-            int flag = 0;
             for (int i = 0; i < hunClass.Count; i++)
             {
                 if (flag>0)
@@ -129,7 +147,7 @@ namespace DHUTeacerCourseHelper
             courseCodeFileTextBox.Text = "";
             courseFileTextBox.Text = "";
             statusLabel.Text = "准备就绪.Powered by Postbird.";
-            statusCountLabel.Text = "";
+            statusCountTextBox.Text = "";
             initRichText();
 
         }
@@ -259,12 +277,16 @@ namespace DHUTeacerCourseHelper
                         /*******************************************************************************************
                          * 
                          *    //需要记录男生多少课  女生多少课 混合班有多少
-                         * 
+                         *    2016-11-17 更新 同时把大一和大二/3/4的分别统计出来
+                         *      
                          * *************************************************************************************/
+                        int oneMenCount = 0;//大一 男
+                        int oneWomenCount = 0;//大一 女
+                        int oneHunCount = 0;//大一 混
 
-                        int menCount = 0;//男
-                        int womenCount = 0;//女
-                        int hunCount = 0;//混
+                        int menCount = 0;//大二/3/4 男
+                        int womenCount = 0;//大二/3/4 女
+                        int hunCount = 0;//大二/3/4 混
                         //简单的循环处理 1代表松江 2代表延安路校区
                         string statusText = "";
                         
@@ -319,7 +341,10 @@ namespace DHUTeacerCourseHelper
                                          如果两个都无法匹配 就算成女生版 因为女生班名字并没有比较明显的标志
                                  *********************************************************************************************/
                                 //获取混合课程内容
-                                string[] hunClassStrArray = hunClassRichText.Text.ToString().Split('\r', '\n');
+                                string[] hunClassStrArray = hunClassRichText.Text.ToString().Split('\r', '\n'); 
+                                //2016-11-17 获取没有带男子的课程内容
+                                string[] manClassStrArray = manClassRichTextBox.Text.ToString().Split('\r', '\n');
+
                                 //去掉所有的空格
                                 for (int t = 0; t < hunClassStrArray.Length; t++)
                                 {
@@ -358,14 +383,114 @@ namespace DHUTeacerCourseHelper
                                         {
                                             tmpGrade = tmpGradeRange.Text.ToString();
                                         }
+
+                                        /**********************************************************************************
+                                         * 
+                                         *      这里是处理男生 女生 混合班的部分
+                                         *      
+                                         *      2016-11-17  我把它放进了处理大一和大二三里面去了
+                                         * 
+                                         ***********************************************************/
+                                        
                                         //把课程代码加上去  大一在课程代码中是新生 
                                         if (tmpGrade.Equals("大一"))
                                         {
                                             tmpText = tmpText + "      " + this.courseCodeDs.Tables[0].Rows[k][2];
+                                            
+                                            //进行大一的统计
+                                            int courseFlag = 0;//匹配标志  
+                                            if (tmpCouse.Contains("男"))
+                                            {
+                                                oneMenCount++;
+                                                courseFlag = 1;
+
+                                            }
+                                            //[废弃]不是男生
+                                            //2016-11-17 还需要匹配一次textbox里面的男生班 没有带男字标志的
+                                            else
+                                            {
+                                                //没有男字标志的男生班
+                                                
+                                                for (int t = 0; t < manClassStrArray.Length; t++)
+                                                {
+                                                    if (manClassStrArray[t] == tmpCouse)
+                                                    {
+                                                        oneMenCount++;
+                                                        courseFlag = 1;
+                                                        break;
+                                                    }
+                                                }
+                                                //混合
+                                                if (courseFlag == 0)
+                                                {
+                                                    for (int t = 0; t < hunClassStrArray.Length; t++)
+                                                    {
+                                                        if (hunClassStrArray[t] == tmpCouse)
+                                                        {
+                                                            oneHunCount++;
+                                                            courseFlag = 1;
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+                                             
+                                                //判断标志 如果是1 不进行处理 如果是0 则进行处理
+                                                if (courseFlag == 0)
+                                                {
+                                                    oneWomenCount++;
+                                                    courseFlag = 1;
+
+                                                }
+                                            }
                                         }
                                         else//老生 也就是 大二、大三、大四 不知道为什么老师没写大四 因此大一作为条件比较好
                                         {
                                             tmpText = tmpText + "      " + this.courseCodeDs.Tables[0].Rows[k][3];
+                                            //进行大一的统计
+                                            int courseFlag = 0;//匹配标志  
+                                            if (tmpCouse.Contains("男"))
+                                            {
+                                                menCount++;
+                                                courseFlag = 1;
+
+                                            }
+                                            //[废弃]不是男生
+                                            //2016-11-17 还需要匹配一次textbox里面的男生班 没有带男字标志的
+                                            else
+                                            {
+                                                //没有男字标志的男生班
+
+                                                for (int t = 0; t < manClassStrArray.Length; t++)
+                                                {
+                                                    if (manClassStrArray[t] == tmpCouse)
+                                                    {
+                                                        menCount++;
+                                                        courseFlag = 1;
+                                                        break;
+                                                    }
+                                                }
+                                                //混合
+                                                if (courseFlag == 0)
+                                                {
+                                                    for (int t = 0; t < hunClassStrArray.Length; t++)
+                                                    {
+                                                        if (hunClassStrArray[t] == tmpCouse)
+                                                        {
+                                                            hunCount++;
+                                                            courseFlag = 1;
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+
+                                                //判断标志 如果是1 不进行处理 如果是0 则进行处理
+                                                if (courseFlag == 0)
+                                                {
+                                                    womenCount++;
+                                                    courseFlag = 1;
+
+                                                }
+                                            }
                                         }
                                         //MessageBox.Show(tmpText);
                                         //修改新的单元格内容
@@ -376,38 +501,6 @@ namespace DHUTeacerCourseHelper
                                         //输出状态
                                         statusLabel.Text = "正在处理" + statusText + " 第 " + courseCount.ToString() + " 条数据...";
 
-                                        /**************************************************************************************************
-                                         * 
-                                         *      这里是处理男生 女生 混合班的部分
-                                         * 
-                                        **************************************************************************************************/
-                                        int courseFlag = 0;//匹配标志
-                                        if (tmpCouse.Contains("男"))
-                                        {
-                                            menCount++;
-                                            courseFlag = 1;
-
-                                        }
-                                        else//不是男生
-                                        {
-                                            //混合
-                                            for(int t= 0; t < hunClassStrArray.Length; t++)
-                                            {
-                                                if(hunClassStrArray[t] == tmpCouse)
-                                                {
-                                                    hunCount++;
-                                                    courseFlag = 1;
-                                                    break;
-                                                }
-                                            }
-                                            //判断标志 如果是1 不进行处理 如果是0 则进行处理
-                                            if(courseFlag == 0)
-                                            {
-                                                womenCount++;
-                                                courseFlag = 1;
-
-                                            }
-                                        }
                                         break;
                                     }
                                     else
@@ -419,7 +512,9 @@ namespace DHUTeacerCourseHelper
                         }
                         //这里是每个校区的处理结束
                         //进行内容的标记
-                        statusCountText += statusText + "共("+ courseCount+")男("+ menCount + ")女(" + womenCount + ")混(" + hunCount+ ") ";
+                        statusCountText += statusText + "共(" + courseCount + ") :"+ System.Environment.NewLine;
+                        statusCountText += "新生：男(" + oneMenCount + ")女(" + oneWomenCount + ")混(" + oneHunCount+ ") " +System.Environment.NewLine;
+                        statusCountText += "老生：男(" + menCount + ")女(" + womenCount + ")混(" + hunCount+ ") " +System.Environment.NewLine;
                         statusLabel.Text = statusText + " 排课处理完成";
                     }
                     //保存文件
@@ -433,7 +528,7 @@ namespace DHUTeacerCourseHelper
                     System.Runtime.InteropServices.Marshal.ReleaseComObject(courseApp);
                     courseApp = null;
                     ////输出状态
-                    statusCountLabel.Text = statusCountText;
+                    statusCountTextBox.Text = statusCountText;
                     statusLabel.Text = "排课处理完成...Powered by postbird";
 
                 }

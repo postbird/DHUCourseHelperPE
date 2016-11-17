@@ -58,14 +58,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DHUTeacerCourseHelper.exe" size="362424">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DHUTeacerCourseHelper.exe" size="363960">
       <assemblyIdentity name="DHUTeacerCourseHelper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>A4Hn5INnAR3uxtICn4PuGvukc0E=</dsig:DigestValue>
+        <dsig:DigestValue>2eWuEBIKEGCx5YzXId/4NEc7wQE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
