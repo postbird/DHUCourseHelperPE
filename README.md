@@ -26,3 +26,5 @@ DHUCourseHelper  **第二次扩展版本** -- **分支为 branch2**
 效果如下：
 
  ![输入图片说明](http://git.oschina.net/uploads/images/2016/1117/135419_f85a01c7_587276.png "在这里输入图片标题")
+
+- 2017-04-08
